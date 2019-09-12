@@ -1,7 +1,15 @@
 const express=require('express');
 const app=express();
 const mongoose =require('mongoose')
-const dbConfig = require('./config/database.config');
+const bodyParser = require('body-parser');
+const router=require('./routes/router');
+const expressValidator=require('express-validator')
+
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+app.use(expressValidator())
+app.use('/',router)
+
 mongoose.Promise = global.Promise;
 mongoose.connect(dbConfig.url, {
     useNewUrlParser: true
@@ -17,3 +25,5 @@ app.listen(3000, () => {
 app.get('/',(req,res)=>{
     res.send("welcome to iflix");
 })
+
+module.exports=app;
