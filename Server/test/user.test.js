@@ -25,4 +25,15 @@ describe('/login',()=>{
             })
         done();
     })
+
+    it('givenValidEmaiAndPassword_whenLoggedIn_thenUserShouldBeLoggedIn',(done)=>{
+        chai.request(app)
+            .post('/login')
+            .send({"userEmail":"shyamkondisetty@gmail.com","password":"shyam123"})
+            .end((error,response)=>{
+                assert.isObject(response);
+                assert.equal(true,response.body.status)
+            })
+        done();
+    })
 })
