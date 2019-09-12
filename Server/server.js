@@ -2,6 +2,7 @@ const express=require('express');
 const app=express();
 const mongoose =require('mongoose')
 const bodyParser = require('body-parser');
+const dbConfig = require('./config/database.config');
 const router=require('./routes/router');
 const expressValidator=require('express-validator')
 

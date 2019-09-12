@@ -14,4 +14,15 @@ describe('/login',()=>{
             })
         done();
     })
+
+    it('giveninValidPassword_whenLoggedIn_thenItShouldNotBeLoggedIn',(done)=>{
+        chai.request(app)
+            .post('/login')
+            .send({"userEmail":"shyamkondisetty@gmail.com","password":"sh"})
+            .end((error,response)=>{
+                assert.isObject(response);
+                assert.equal(false,response.body.status)
+            })
+        done();
+    })
 })
