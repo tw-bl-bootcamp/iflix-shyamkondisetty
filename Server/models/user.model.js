@@ -15,6 +15,9 @@ User.prototype.login = (loginData, callback) => {
         if (err) {
             callback(err)
         }
+        else if(userResult==null){
+            callback("invalid user")
+        }
         else {
             callback(null, userResult)
         }

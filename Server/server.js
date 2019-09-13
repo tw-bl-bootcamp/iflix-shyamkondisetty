@@ -5,7 +5,8 @@ const bodyParser = require('body-parser');
 const dbConfig = require('./config/database.config');
 const router=require('./routes/router');
 const expressValidator=require('express-validator')
-
+const cors = require('cors');
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(expressValidator())
