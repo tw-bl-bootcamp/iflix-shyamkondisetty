@@ -19,7 +19,7 @@ _TBD Please update as per stack choices being used in your private project repo_
 ### Languages
 * Javascript
 * HTML 5
-* CSS 3
+* SCSS
 
 ### Frameworks
 * Nodejs / Express
@@ -28,6 +28,12 @@ _TBD Please update as per stack choices being used in your private project repo_
 
 ### Infra
 * MongoDB
+
+### PreRequestives
+* MongoDB 
+* node js
+* Angular Cli
+
 
 ## Useful Commands
 _TBD - Please enter the commands to build, test and run the app at the very least below_
@@ -54,4 +60,10 @@ npm run test
 
 ```
 npm start
+```
+
+* Dependencies install
+
+```
+sh dependencies.sh
 ```
