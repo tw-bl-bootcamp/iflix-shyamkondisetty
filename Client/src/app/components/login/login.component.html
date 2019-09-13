@@ -1,0 +1,27 @@
+<div fxLayout=column fxLayoutAlign="center center" class="loginPage" style="height:100vh">
+    <mat-card fxFlexAlign="space-between center" style="width:30%">
+        <div fxLayoutAlign="center center">
+            <h1>IFLIX BOOKING APP</h1>
+        </div>
+        <div fxLayoutAlign="center center">
+            <h2>Login</h2>
+        </div>
+
+        <div fxLayoutAlign="center center">
+            <mat-form-field fxFlex="90">
+                <input matInput placeholder="Enter your email" [formControl]="email" required>
+                <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div fxLayoutAlign="center center">
+            <mat-form-field fxFlex="90">
+                <input matInput placeholder="Enter Password" [formControl]="password" required>
+                <mat-error *ngIf="email.invalid">{{getPasswordErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <div fxLayoutAlign="end end">
+            <button mat-flat-button color="primary" type="submit" (click)="submit()">Next</button>
+        </div>
+    </mat-card>
+</div>
