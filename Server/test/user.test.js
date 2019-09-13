@@ -20,7 +20,6 @@ describe('/login',()=>{
             .post('/login')
             .send({"userEmail":"shyamkondisetty@gmail.com","password":"sh"})
             .end((error,response)=>{
-                assert.isObject(response);
                 assert.equal(false,response.body.status)
             })
         done();
@@ -29,7 +28,7 @@ describe('/login',()=>{
     it('givenValidEmaiAndPassword_whenLoggedIn_thenUserShouldBeLoggedIn',(done)=>{
         chai.request(app)
             .post('/login')
-            .send({"userEmail":"shyamkondisetty@gmail.com","password":"shyam123"})
+            .send({"userEmail":"shyamkondisetty@gmail.com","password":"12345"})
             .end((error,response)=>{
                 assert.isObject(response);
                 assert.equal(true,response.body.status)
