@@ -41,7 +41,7 @@ _TBD - Please enter the commands to build, test and run the app at the very leas
 * Test
 
 ```
-
+npm run test
 ```
 
 * Deploy
