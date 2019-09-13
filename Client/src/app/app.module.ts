@@ -12,12 +12,20 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material';
 import {MatCardModule} from '@angular/material/card';
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { HttpClientModule } from '@angular/common/http'; 
-//import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { AllMoviesComponent } from './components/all-movies/all-movies.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MovieComponent } from './components/movie/movie.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    AllMoviesComponent,
+    DashboardComponent,
+    MovieComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +39,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatCardModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

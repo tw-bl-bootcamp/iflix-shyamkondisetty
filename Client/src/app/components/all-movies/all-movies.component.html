@@ -1,1 +1,16 @@
-<p>all-movies works!</p>
+<div fxFlex="100%" fxLayout="column">
+    <div>
+        <mat-toolbar>Movies Available</mat-toolbar>
+    </div>
+    <div fxFlex="100%" fxLayout="row" fxLayoutAlign="center center">
+        <div fxFlex="80%" fxLayout="row wrap" fxLayoutAlign="start start">
+            <div fxFlex="33.3" *ngFor="let movie of movies" >
+                <mat-card fxFlex="90" style="margin-top: 5%; margin-bottom:5%" routerLink='/shows/{{movie.title}}' >
+                    <mat-card-title>{{movie.title}}</mat-card-title>
+                    <mat-card-content>Rating:{{movie.rating}}</mat-card-content>
+                    <mat-card-content>Audience Score:{{movie.review}}</mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
